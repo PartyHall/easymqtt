@@ -26,8 +26,8 @@ func New(
 	opts := mqtt.NewClientOptions().
 		AddBroker(address).
 		SetClientID(clientId).
-		SetPingTimeout(30 * time.Second).
-		SetKeepAlive(20 * time.Second).
+		SetPingTimeout(10 * time.Second).
+		SetKeepAlive(60 * time.Second).
 		SetAutoReconnect(true).
 		SetMaxReconnectInterval(10 * time.Second).
 		SetConnectionLostHandler(connectionLostHandler).
